@@ -1,0 +1,54 @@
+Start Node js for scratch
+
+     =>Requirements
+       1.install Node.js and Git.
+     =>Creating the App
+       1.go to your project dir.
+       2.open your terminal there and run this command:
+        
+          *npm init  //it create packages file
+
+
+     =>Installing All REquires Modules
+       
+       >Express: *npm install express --save
+
+     => run : *npm install
+
+     =>Create js file using this command
+        * touch server.js
+    
+     =>Let`s start coding 
+
+        server.js:
+
+           var express = require('express'); //Importing Express
+           var app = express(); //Getting App From Express
+           const port = 8080; //Creating A Constant For Providing The Port         
+           app.listen(port); //Telling Express App To Listen To Port
+                            //Routing Request : http://localhost:port/ 
+
+           app.get('/',function(request,response)
+             {
+                           //Telling Browser That The File Provided Is A HTML File
+               response.writeHead(200,{"Content-Type":"text/html"});
+
+                           //Passing HTML To Browser
+               response.write("The Server Is <strong>Working</strong>!");
+                           //Ending Response
+                response.end();
+            })
+          console.log("Server Running At:localhost:"+port);
+
+        
+       =>Deploy the Server 
+
+           
+
+          UseFull Link are =>
+
+          https://dzone.com/articles/getting-started-with-nodejs-and-socketio
+
+
+
+  
